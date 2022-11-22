@@ -2,7 +2,7 @@
 
 include ("../practica4.6_AcccesoDatos/conexion.php");
 if (isset($_POST['registrar'])){
-    $numControl=$_POST['numControl'];
+    $numControl=$_POST['numero_Control'];
     $nombre=$_POST['nombre'];
     $apePaterno=$_POST['apellido_paterno'];
     $apeMaterno=$_POST['apellido_materno'];
