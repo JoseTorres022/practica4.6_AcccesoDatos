@@ -8,17 +8,18 @@
         <div class="col-md-4">
 
             <?php if (isset($_SESSION['message'])) { ?>
-                <div class="alert alert-<?= $_SESSION['message_type']; ?> alert-dismissible fade show" role="alert">
-                    <?= $_SESSION['message'] ?>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
+            <div class="alert alert-<?= $_SESSION['message_type']; ?> alert-dismissible fade show" role="alert">
+                <?= $_SESSION['message'] ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
             <?php session_unset();
             } ?>
 
             <div class="card card-body">
                 <form action="guardarDatos.php" method="POST">
                     <div class="form-group m-1">
-                        <input type="text" name="numControl" class="form-control" placeholder="Numero de control" autofocus>
+                        <input type="text" name="numControl" class="form-control" placeholder="Numero de control"
+                            autofocus>
                     </div>
 
                     <div class="form-group m-1 ">
@@ -61,29 +62,47 @@
                         <th>Semestre</th>
                         <th>Fecha Alta</th>
                         <th>Fecha Modificacion</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    //CRUD (C): Generando la consulta necesaria para la operacion basica (1) "CREATE":
+                    //CRUD (R): Generando la consulta necesaria para la operacion basica (2) "READ":
                     $query = "SELECT * FROM alumnos";
                     //un variable que resibe la conexion y la consulta
                     $resultado = mysqli_query($conexion, $query);
 
                     //Con el ciclo while recorremos las filas
                     while ($row = mysqli_fetch_array($resultado)) { ?>
-                        <tr>
-                            <!-- Lo que esta entre conchete el atributo va segun, lo estructurado
+                    <tr>
+                        <!-- Lo que esta entre conchete el atributo va segun, lo estructurado
                         en la tabla, es decir, los nombres de las comlunas en la base  dedats -->
-                            <td> <?php echo $row['numero_Control'] ?> </td>
-                            <td> <?php echo $row['nombre'] ?> </td>
-                            <td> <?php echo $row['apellido_paterno'] ?> </td>
-                            <td> <?php echo $row['apellido_materno'] ?> </td>
-                            <td> <?php echo $row['carrera'] ?> </td>
-                            <td> <?php echo $row['semestre'] ?> </td>
-                            <td> <?php echo $row['fecha_Alta'] ?> </td>
-                            <td> <?php echo $row['fecha_Modificacion'] ?> </td>
-                        </tr>
+                        <td> <?php echo $row['numero_Control'] ?> </td>
+                        <td> <?php echo $row['nombre'] ?> </td>
+                        <td> <?php echo $row['apellido_paterno'] ?> </td>
+                        <td> <?php echo $row['apellido_materno'] ?> </td>
+                        <td> <?php echo $row['carrera'] ?> </td>
+                        <td> <?php echo $row['semestre'] ?> </td>
+                        <td> <?php echo $row['fecha_Alta'] ?> </td>
+                        <td> <?php echo $row['fecha_Modificacion'] ?> </td>
+                        <!-- Fin de la operacion basica READ -->
+
+                        <td>
+                            <!-- CRUD (UPDATE): Generando la consulta necesaria para la operacion basica (3) "UPDATE": -->
+                            <a href="actualizarDatos.php?id=<?php echo $row['numero_Control'] ?>">
+                                <i class="fa-solid fa-file-pen"></i>
+                            </a>
+                            <!-- Fin de la operacion basica UPDATE -->
+
+                            <!-- CRUD (DELETE): Generando la consulta necesaria para la operacion basica (3) "UPDATE": -->
+                            <a href="/elminarDatos.php?id=<?php echo $row['numero_Control'] ?>">
+
+                            </a>
+                            <!-- Fin de la operacion basica DELETE -->
+
+                        </td>
+
+                    </tr>
                     <?php } ?>
                 </tbody>
             </table>
