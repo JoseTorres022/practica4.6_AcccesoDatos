@@ -89,7 +89,8 @@
 
                         <td>
                             <!-- CRUD (UPDATE): Generando la consulta necesaria para la operacion basica (3) "UPDATE": -->
-                            <a style="text-decoration:none; margin: 1px;" href="actualizarDatos.php?numero_Control=<?php echo $row['numero_Control'] ?>">
+                            <a style="text-decoration:none; margin: 1px;"
+                                href="actualizarDatos.php?numero_Control=<?php echo $row['numero_Control'] ?>">
                                 <!-- <i class="fa-light fa-pen-to-square"></i> -->
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit"
                                     width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#000000"
@@ -101,11 +102,12 @@
                                 </svg>
                             </a>
                             <!-- Fin de la operacion basica UPDATE -->
-                                <a style="font-size: 15px;">
-                                    |
-                                </a>
+                            <a style="font-size: 15px;">
+                                |
+                            </a>
                             <!-- CRUD (DELETE): Generando la consulta necesaria para la operacion basica (3) "UPDATE": -->
-                            <a style="text-decoration:none; margin: 1px;" href="elminarDatos.php?numero_Control=<?php echo $row['numero_Control'] ?>">
+                            <a style="text-decoration:none; margin: 1px;"
+                                href="elminarDatos.php?numero_Control=<?php echo $row['numero_Control'] ?>">
                                 <!-- eliminar -->
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash"
                                     width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#000000"

@@ -13,4 +13,3 @@ if (isset($_GET['numero_Control'])) {
     $_SESSION['message_type'] = "danger";
     header("Location: index.php");
 }
-?>

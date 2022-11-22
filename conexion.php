@@ -12,5 +12,3 @@ $conexion = mysqli_connect(
 // if(isset($conexion)){
 //     echo "Conexion extablecida correctamente padrino";
 // }
-
-?>
