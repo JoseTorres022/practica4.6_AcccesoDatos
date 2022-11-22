@@ -18,7 +18,7 @@
             <div class="card card-body">
                 <form action="guardarDatos.php" method="POST">
                     <div class="form-group m-2">
-                        <input type="text" name="numControl" class="form-control" placeholder="Numero de control"
+                        <input type="text" name="numero_Control" class="form-control" placeholder="Numero de control"
                             autofocus>
                     </div>
 
