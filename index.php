@@ -17,32 +17,32 @@
 
             <div class="card card-body">
                 <form action="guardarDatos.php" method="POST">
-                    <div class="form-group m-1">
+                    <div class="form-group m-2">
                         <input type="text" name="numControl" class="form-control" placeholder="Numero de control"
                             autofocus>
                     </div>
 
-                    <div class="form-group m-1 ">
+                    <div class="form-group m-2 ">
                         <input type="text" name="nombre" class="form-control" placeholder="Nombre alumno">
                     </div>
 
-                    <div class="form-group m-1">
+                    <div class="form-group m-2">
                         <input type="text" name="apellido_paterno" class="form-control" placeholder="Ape. paterno">
                     </div>
 
-                    <div class="form-group m-1">
+                    <div class="form-group m-2">
                         <input type="text" name="apellido_materno" class="form-control" placeholder="Ape. materno">
                     </div>
 
-                    <div class="form-group m-1">
+                    <div class="form-group m-2">
                         <input type="text" name="carrera" class="form-control" placeholder="Carrera">
                     </div>
 
-                    <div class="form-group m-1">
+                    <div class="form-group m-2">
                         <input type="number" name="semestre" class="form-control" placeholder="Semestre">
                     </div>
 
-                    <div class="form-group m-1">
+                    <div class="form-group m-2">
                         <input type="submit" class="btn btn-success btn-block" name="registrar" value="Registrar">
                     </div>
                 </form>
@@ -89,14 +89,15 @@
 
                         <td>
                             <!-- CRUD (UPDATE): Generando la consulta necesaria para la operacion basica (3) "UPDATE": -->
-                            <a href="actualizarDatos.php?id=<?php echo $row['numero_Control'] ?>">
-                                <i class="fa-solid fa-file-pen"></i>
+                            <a href="actualizarDatos.php?numero_Control=<?php echo $row['numero_Control'] ?>">
+                            <i class="fa-light fa-pen-to-square"></i>
                             </a>
                             <!-- Fin de la operacion basica UPDATE -->
 
                             <!-- CRUD (DELETE): Generando la consulta necesaria para la operacion basica (3) "UPDATE": -->
-                            <a href="/elminarDatos.php?id=<?php echo $row['numero_Control'] ?>">
-                                <i class="fa-solid fa-trash"></i>
+                            <a href="elminarDatos.php?numero_Control=<?php echo $row['numero_Control'] ?>">
+                                eliminar
+
                             </a>
                             <!-- Fin de la operacion basica DELETE -->
 
