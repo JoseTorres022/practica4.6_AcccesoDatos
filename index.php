@@ -96,7 +96,7 @@
 
                             <!-- CRUD (DELETE): Generando la consulta necesaria para la operacion basica (3) "UPDATE": -->
                             <a href="/elminarDatos.php?id=<?php echo $row['numero_Control'] ?>">
-
+                                <i class="fa-solid fa-trash"></i>
                             </a>
                             <!-- Fin de la operacion basica DELETE -->
 
