@@ -9,6 +9,7 @@ if (isset($_POST['registrar'])){
     $carrera=$_POST['carrera'];
     $semestre=$_POST['semestre'];
 
+    //CRUD (C): Generando la consulta necesaria para la operacion basica (1) "CREATE":
     $query="INSERT INTO alumnos (numero_Control, nombre, apellido_Paterno, apellido_Materno, carrera, semestre)
             VALUES ('$numControl','$nombre','$apePaterno','$apeMaterno','$carrera','$semestre')";
     $resultado=mysqli_query($conexion,$query);
@@ -16,7 +17,9 @@ if (isset($_POST['registrar'])){
     if(!$resultado){
         die("La consulta a fallado");
     }
+    //Fin de la operacion CREATE
 
+    //Este es solo un mesaje que aparece cuando se registran correctamente.
     $_SESSION['message']='Datos registrados correctamente';
     $_SESSION['message_type']='success';
     header("Location: index.php");
