@@ -9,7 +9,7 @@
     <!-- Bootstrap 5.2.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <!-- Para cierto estilos -->
-    <link rel="stylesheet" href="/misrecursos/estilo.css">
+    <!-- <link rel="stylesheet" href="/misrecursos/estilo.css"> -->
 </head>
 
 <body>

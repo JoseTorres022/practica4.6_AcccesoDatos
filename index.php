@@ -1,9 +1,20 @@
 <?php include("../practica4.6_AcccesoDatos/conexion.php") ?>
 <?php include("../practica4.6_AcccesoDatos/includes/header.php") ?>
 
+</br>
+</br>
 <div class="container p-1">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-5">
+
+            <?php if (isset($_SESSION['message'])) { ?>
+                <div class="alert alert-<?= $_SESSION['message_type']; ?> alert-dismissible fade show" role="alert">
+                    <?= $_SESSION['message'] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php session_unset();
+            } ?>
+
             <div class="card card-body">
                 <form action="guardarDatos.php" method="POST">
                     <div class="form-group m-2">
@@ -29,7 +40,10 @@
                     <div class="form-group m-2">
                         <input type="number" name="semestre" class="form-control" placeholder="Semestre">
                     </div>
-                    <input type="submit" class="btn btn-success btn-block" name="registrar" value="Registrar">
+
+                    <div class="form-group m-2">
+                        <input type="submit" class="btn btn-success btn-block" name="registrar" value="Registrar">
+                    </div>
                 </form>
             </div>
         </div>

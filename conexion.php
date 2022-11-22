@@ -1,4 +1,6 @@
 <?php 
+
+session_start();
 $conexion = mysqli_connect(
     'localhost',//nombre host
     'josetorresxampp', //nombre de usuario
