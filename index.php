@@ -68,7 +68,8 @@
                 <tbody>
                     <?php
                     //CRUD (R): Generando la consulta necesaria para la operacion basica (2) "READ":
-                    $query = "SELECT * FROM alumnos";
+                    $query = "SELECT * FROM alumnos 
+                              ORDER BY fecha_Alta DESC";
                     //un variable que resibe la conexion y la consulta
                     $resultado = mysqli_query($conexion, $query);
 
